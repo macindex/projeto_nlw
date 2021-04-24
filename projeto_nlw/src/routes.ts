@@ -20,7 +20,7 @@ routes.post("/settings", async (request, response) => {
     // Desestruturação
     const { chat, username } = request.body;
 
-    const settingsRepository = getCustomRepository(SettingsRepository)
+    const settingsRepository = getCustomRepository(SettingsRepository);
 
     const settings = settingsRepository.create({
 
