@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getCustomRepository } from "typeorm";
-import { SettingsController } from "./controllers/settingsController";
+import { SettingsController } from "./controllers/SettingsController";
 
 const routes = Router();
 
