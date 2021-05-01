@@ -20,11 +20,13 @@ app.get("/pages/client", (request, response) => {
 const http = createServer(app); // Criando protocolo HTTP
 const io = new Server(http); // Criando protocolo WD
 
-app.use(express.json());
+
 
 io.on("connection", (socket: Socket) => {
-    console.log("Se conectou", socket.id);
+    // console.log("Se conectou", socket.id);
 });
+
+app.use(express.json());
 
 app.use(routes);
 // app.get("/", (request, response) => {
@@ -39,4 +41,4 @@ app.use(routes);
 
 // });
 
-export{ http, io };
+export { http, io };
