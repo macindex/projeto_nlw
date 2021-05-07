@@ -83,7 +83,7 @@ function sendMessage(id) {
     const divMessages = document.getElementById(`allMessages${id}`);
     const createDiv = document.createElement('div');
 
-    createDiv.className = 'admin_message_admin';
+    createDiv.className = "admin_message_admin";
     createDiv.innerHTML = `Atendente: <span>${params.text}</span`;
     createDiv.innerHTML += `<span class="admin_date">${dayjs().format(
         'DD/MM/YYYY HH:mm:ss'
@@ -91,7 +91,7 @@ function sendMessage(id) {
 
     divMessages.appendChild(createDiv);
 
-    text.value = '';
+    text.value = "";
 }
 
 socket.on('admin_receive_message', (data) => {
